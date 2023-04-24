@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  app:
+    image: peregrine-poc-php-tcp-app
+    build:
+      context: .
+      dockerfile: ./Dockerfiles/app.Dockerfile
+      args:
+        UID: $UID
+    volumes:
+      - ../src/:/app/
+    command: tail -f /dev/null
+    # command: php /app/server.php
+    ports:
+      - 23:23
