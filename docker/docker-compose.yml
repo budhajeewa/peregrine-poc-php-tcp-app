@@ -1,4 +1,5 @@
 version: '3.8'
+name: 'peregrine-poc-php-tcp-app'
 services:
   app:
     image: peregrine-poc-php-tcp-app
